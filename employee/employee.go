@@ -2,7 +2,7 @@ package employee
 
 import "context"
 
-//go:generate moq -out employee_moq_test.go . EmployeeRepository
+//go:generate moq -fmt goimports -out employee_moq_test.go . EmployeeRepository
 
 type EmployeeRepository interface {
 	Get(ctx context.Context, id EmployeeID) (*Employee, error)

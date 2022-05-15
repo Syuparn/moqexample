@@ -5,8 +5,9 @@ package workflow
 
 import (
 	"context"
-	"github.com/syuparn/moqexample/employee"
 	"sync"
+
+	"github.com/syuparn/moqexample/employee"
 )
 
 // Ensure, that EmployeeWorkflowServiceMock does implement EmployeeWorkflowService.
