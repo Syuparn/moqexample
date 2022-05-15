@@ -63,6 +63,10 @@ func TestCreateEmployeeUsecase(t *testing.T) {
 
 			assert.Equal(t, tt.expected, actual)
 			assert.Nil(t, err)
+
+			for _, c := range wfRepo.GetCalls() {
+				assert.Equal(t, WorkflowID(5678), c.ID)
+			}
 		})
 	}
 }
